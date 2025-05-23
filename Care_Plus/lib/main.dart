@@ -1,3 +1,4 @@
+import 'package:Care_Plus/screens/Loading/loading.dart';
 import 'package:flutter/material.dart';
 
 // using namespace to avoid clash
@@ -30,24 +31,30 @@ class CarePlusApp extends StatelessWidget {
         AppRoutes.login: (context) => LoginScreen(),
         AppRoutes.main: (context) => home_page.HomeScreen(),
         AppRoutes.profile: (context) => profile_page.ProfileScreen(),
+        AppRoutes.loading: (context) => SplashScreen(),
         AppRoutes.profileEdit: (context) {
-          final args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+          final args =
+              ModalRoute.of(context)?.settings.arguments
+                  as Map<String, dynamic>?;
 
           return ProfileEditScreen(
-            isGuardian: args != null ? args['isGuardian'] as bool? ?? false : false,
+            isGuardian:
+                args != null ? args['isGuardian'] as bool? ?? false : false,
           );
         },
       },
-      onUnknownRoute: (settings) => MaterialPageRoute(
-        builder: (context) => const Scaffold(
-          body: Center(
-            child: Text(
-              "404 - Page Not Found",
-              style: TextStyle(fontSize: 20),
-            ),
+      onUnknownRoute:
+          (settings) => MaterialPageRoute(
+            builder:
+                (context) => const Scaffold(
+                  body: Center(
+                    child: Text(
+                      "404 - Page Not Found",
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ),
+                ),
           ),
-        ),
-      ),
     );
   }
 }
@@ -58,4 +65,5 @@ class AppRoutes {
   static const String main = '/main';
   static const String profile = '/profile';
   static const String profileEdit = '/profile/edit';
+  static const String loading = '/loading';
 }
