@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:Care_Plus/screens/profile/profile_screen.dart' as profile_page;
+import 'package:Care_Plus/screens/Home/ManageMedicineSchedule.dart';
 
 class HomeScreen extends StatelessWidget {
   final List<Map<String, dynamic>> features = [
