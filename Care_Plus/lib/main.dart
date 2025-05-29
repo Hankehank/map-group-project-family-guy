@@ -7,6 +7,7 @@ import 'package:Care_Plus/screens/profile/profile_screen.dart' as profile_page;
 import 'package:Care_Plus/screens/Login/signup.dart';
 import 'package:Care_Plus/screens/Login/login.dart';
 import 'package:Care_Plus/screens/profile/profile_edit_screen.dart';
+// import 'package:Care_Plus/screens/appointment/appointment_page.dart';
 
 void main() {
   runApp(const CarePlusApp());
@@ -66,4 +67,6 @@ class AppRoutes {
   static const String profile = '/profile';
   static const String profileEdit = '/profile/edit';
   static const String loading = '/loading';
+
+  static String appointment = '/appointment';
 }
